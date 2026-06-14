@@ -12,7 +12,7 @@ export default function HeroSection() {
     <section className={styles.hero} id="home">
       {/* Ambient BG video */}
       <div className={styles.bgWrap}>
-        <video className={styles.bgVideo} src="/videos/nexus-showreel.mp4"
+        <video className={styles.bgVideo} src="https://res.cloudinary.com/db7rymk1j/video/upload/v1781461924/piris-katwe/nexus-showreel.mp4"
           autoPlay muted playsInline loop />
       </div>
       <div className={styles.grid} />

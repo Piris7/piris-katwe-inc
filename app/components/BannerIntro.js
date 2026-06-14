@@ -22,7 +22,7 @@ export default function BannerIntro({ onDone }) {
 
   return (
     <div className={styles.wrap}>
-      <video ref={videoRef} className={styles.video} src="/videos/banner-intro.mp4"
+      <video ref={videoRef} className={styles.video} src="https://res.cloudinary.com/db7rymk1j/video/upload/v1781461786/piris-katwe/banner-intro.mp4"
         autoPlay muted playsInline />
       <div className={styles.overlay} />
       <div className={styles.grid} />
