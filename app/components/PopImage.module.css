@@ -1,0 +1,20 @@
+.wrap {
+  position: relative; width: 100%; height: clamp(280px, 40vw, 560px);
+  overflow: hidden; background: #0A1628;
+}
+.wrap :global(img) { transition: transform 8s ease !important; }
+.wrap:hover :global(img) { transform: scale(1.04) !important; }
+.badge {
+  position: absolute; bottom: 40px; left: 7%; z-index: 2;
+  background: rgba(10,22,40,0.88);
+  border: 1px solid rgba(74,158,255,0.3);
+  border-radius: 8px; padding: 18px 28px;
+  backdrop-filter: blur(12px);
+}
+.pill {
+  display: inline-block; background: #4A9EFF; color: #0A1628;
+  font-size: 10px; font-weight: 800; letter-spacing: 2px;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 8px;
+}
+.line { font-size: clamp(14px, 2vw, 20px); font-weight: 700; color: #fff; }

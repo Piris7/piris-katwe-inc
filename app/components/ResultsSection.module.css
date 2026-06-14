@@ -1,0 +1,53 @@
+.section { padding: 110px 0; background: #112040; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 5%; }
+.header { margin-bottom: 56px; }
+.pill {
+  display: inline-block; background: rgba(74,158,255,0.12);
+  border: 1px solid rgba(74,158,255,0.28); border-radius: 100px;
+  padding: 6px 16px; font-size: 11px; font-weight: 700;
+  color: #4A9EFF; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+}
+.title { font-size: clamp(30px, 4vw, 50px); font-weight: 900; color: #fff; letter-spacing: -1px; }
+.title span { color: #4A9EFF; }
+.rule { width: 50px; height: 3px; background: linear-gradient(90deg, #4A9EFF, transparent); border-radius: 3px; margin-top: 18px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 420px;
+  gap: 18px;
+}
+
+.card {
+  position: relative; border-radius: 16px; overflow: hidden;
+  background: #0A1628; cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s;
+}
+.card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+.card:hover :global(img) { transform: scale(1.06) !important; }
+.card :global(img) { transition: transform 0.6s ease !important; }
+
+.cardImg { position: absolute; inset: 0; }
+.cardOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.3) 60%, transparent 100%);
+}
+.cardContent {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 28px; z-index: 2;
+}
+.tag {
+  display: inline-block; background: rgba(74,158,255,0.2);
+  border: 1px solid rgba(74,158,255,0.35);
+  border-radius: 20px; padding: 3px 12px;
+  font-size: 10px; font-weight: 700; color: #4A9EFF;
+  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;
+}
+.cardTitle { font-size: clamp(16px, 1.8vw, 22px); font-weight: 800; color: #fff; margin-bottom: 8px; }
+.cardDesc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.55; margin-bottom: 16px; }
+.metric { display: flex; align-items: baseline; gap: 8px; }
+.metricNum { font-size: clamp(26px, 3vw, 38px); font-weight: 900; color: #4A9EFF; }
+.metricLabel { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; } .big { grid-column: span 2; height: 320px; } }
+@media (max-width: 600px) { .section { padding: 70px 0; } .grid { grid-template-columns: 1fr; } .big { grid-column: span 1; } }
